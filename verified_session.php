@@ -20,10 +20,14 @@ if(isset($_SESSION["user_data"]["id"]) && $_SESSION["login"] == true){
     $actual_page = basename($_SERVER['PHP_SELF']);
       
 <<<<<<< HEAD
+<<<<<<< HEAD
     if($actual_page == "home.php"){
 =======
     if($actual_page == "main.php"){
 >>>>>>> origin/VEAU
+=======
+    if($actual_page == "main.php"){
+>>>>>>> master
         return true;
     }else{
         //URL actual
@@ -52,8 +56,13 @@ if(time() > $_SESSION["expirate"]){
     echo "Su sesión ha expirado vuelva a loguearse";
     die;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 
 >>>>>>> origin/VEAU
+=======
+}
+
+>>>>>>> master

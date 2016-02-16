@@ -54,6 +54,7 @@
     <script src="js/bootstrap.min.js"></script>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 </body>
 
 </html>
@@ -91,3 +92,5 @@ if($user_data){
 ?>
 =======
 >>>>>>> origin/VEAU
+=======
+>>>>>>> master

@@ -2,9 +2,15 @@
 include(__DIR__."/config.php");
 include($basepath."verified_session.php"); 
 ?>
+<<<<<<< HEAD
 <html lang="en">
 
 <?php include("../header_cliente.php");?>
+=======
+
+
+<?php include("../header_home.php");?>
+>>>>>>> master
 
     <!-- Header -->
     <a name="about"></a>

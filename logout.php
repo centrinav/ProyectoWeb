@@ -10,10 +10,14 @@ session_start();
 session_destroy();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 header("Location:index.php");
 =======
 header("Location:index.php");
 >>>>>>> origin/VEAU
+=======
+header("Location:index.php");
+>>>>>>> master
 =======
 header("Location:index.php");
 >>>>>>> master

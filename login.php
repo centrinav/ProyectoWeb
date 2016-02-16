@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,6 +79,8 @@
 
 =======
 >>>>>>> origin/VEAU
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 <?php include("login_redirect.php"); ?>

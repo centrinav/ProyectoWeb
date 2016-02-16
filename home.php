@@ -3,9 +3,15 @@ include(__DIR__."/config.php");
 include($basepath."verified_session.php"); 
 ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <html lang="en">
 
 <?php include("../header_cliente.php");?>
+=======
+
+
+<?php include("../header_home.php");?>
+>>>>>>> master
 =======
 
 

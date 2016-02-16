@@ -21,10 +21,14 @@ if(isset($_SESSION["user_data"]["id"]) && $_SESSION["login"] == true){
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if($actual_page == "home.php"){
 =======
     if($actual_page == "main.php"){
 >>>>>>> origin/VEAU
+=======
+    if($actual_page == "main.php"){
+>>>>>>> master
 =======
     if($actual_page == "main.php"){
 >>>>>>> master
@@ -57,11 +61,16 @@ if(time() > $_SESSION["expirate"]){
     die;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 
 >>>>>>> origin/VEAU
+=======
+}
+
+>>>>>>> master
 =======
 }
 

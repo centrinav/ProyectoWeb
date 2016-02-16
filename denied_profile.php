@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 <!DOCTYPE html>
@@ -11,7 +14,10 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/VEAU
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 <html>

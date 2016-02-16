@@ -55,6 +55,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 </body>
 
 </html>
@@ -92,5 +93,7 @@ if($user_data){
 ?>
 =======
 >>>>>>> origin/VEAU
+=======
+>>>>>>> master
 =======
 >>>>>>> master

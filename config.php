@@ -2,11 +2,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 $project_name = "/ProyectoWeb/";
 $basepath = $_SERVER["DOCUMENT_ROOT"]."$project_name";
 $baseurl = "http://".$_SERVER["HTTP_HOST"]."$project_name";
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 /* 
@@ -19,6 +22,9 @@ $basepath = $_SERVER["DOCUMENT_ROOT"]."$project_name";
 $baseurl = "http://".$_SERVER["HTTP_HOST"]."$project_name";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/VEAU
+=======
+>>>>>>> master
 =======
 >>>>>>> master

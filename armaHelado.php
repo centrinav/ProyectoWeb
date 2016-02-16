@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,6 +71,15 @@
         </div>
         <!-- /.container -->
     </nav>
+=======
+<?php 
+include(__DIR__."/config.php");
+include($basepath."verified_session.php"); 
+?>
+
+
+<?php include("../header_home.php");?>
+>>>>>>> master
 
     <div></div>
 

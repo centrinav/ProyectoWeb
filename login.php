@@ -56,7 +56,7 @@
                         <a href="">Promociones</a>
                     </li>
                     <li>
-                        <a href="">¿Cómo preparar?</a>
+                        <a href="armaHelado.php">Arma tu helado</a>
                     </li>
 <!--
                     <li>

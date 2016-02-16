@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php 
+include(__DIR__."/config.php");
+include($basepath."verified_session.php"); 
+?>
 <html lang="en">
 
 <head>
@@ -41,9 +44,49 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="login.php"><button class="btn btn-lg btn-block btn-primary" id="button_login">SIGN IN</button></a>
-                    </li>
+                    <br>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> 
+                        <strong style="font-size:{20px;}">Perfil</strong>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="navbar-login">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p class="text-center">
+                                            <span class="glyphicon glyphicon-user icon-size"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="text-left"><strong>Nombre Apellido</strong></p>
+                                        <p class="text-left">
+                                            <a href="#" class="btn btn-primary btn-block btn-sm" id="button_actualizar">Actualizar Datos</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="navbar-login navbar-login-session">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>
+                                            <?php 
+                    $profile = new Profile();
+                    $menu = $profile->getMenu(NULL, $_SESSION["user_data"]["profile_id"]);
+                    echo $menu;
+                    ?>
+                                            <a href="<?php echo $baseurl; ?>logout.php" class="btn btn-danger btn-block" id="button_cerrarSesion">Cerrar Sesion</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" id="opcionesMenu">
                     <li>
@@ -127,3 +170,4 @@
 </body>
 
 </html>
+    

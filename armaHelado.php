@@ -58,7 +58,6 @@
                     <li>
                         <a href="armaHelado.php">Arma tu helado</a>
                     </li>
-                    
 <!--
                     <li>
                         <a href="">Haz tu pedido</a>
@@ -71,30 +70,9 @@
         </div>
         <!-- /.container -->
     </nav>
-<br>
-<br>
-<br>
-<br>
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        
-                    </div>
-                </div>
-            </div>
+    <div></div>
 
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
-    
-    <!--Subfooter -->
     
     <!-- Footer -->
     <footer>
@@ -105,11 +83,6 @@
                     <a href="http://www.facebook.com/gelatosfera/"><img src="img/logo/fb.png" height="50" width="50"></a>
                     <a href="https://www.instagram.com/gelatosfera/"><img src="img/logo/instag.png" height="50" width="50"></a>
                 </div>
-<!--
-                <div class="col-lg-3">
-                    <img src="img/otros/mascota.png" height="100" width="60">
-                </div>
--->
                 <div class="col-lg-3">
                     <p class="copyright text-muted small">Copyright &copy; Gelatosfera 2016.</p>
                 </div>
@@ -123,6 +96,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
 
 </body>
 

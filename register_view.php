@@ -56,7 +56,7 @@
                         <a href="">Promociones</a>
                     </li>
                     <li>
-                        <a href="">¿Cómo preparar?</a>
+                        <a href="armaHelado.php">Arma tu helado</a>
                     </li>
 <!--
                     <li>
@@ -100,6 +100,9 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
 <!--Contenido -->    
 <div class="container" id="contenido">
     <div class="col-md-4">
+        <br>
+        <br>
+        <br>
             <img src="img/otros/mascota.png" height="350" width="300">
         </div>
     <div class="col-md-8">

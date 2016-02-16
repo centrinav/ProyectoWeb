@@ -6,7 +6,9 @@ include($basepath."verified_session.php");
 
 <?php include("../header_home.php");?>
 
-    <div></div>
+<div class="container">
+    <h1 class="text-info text-center">Arma tu helado</h1>
+</div>
 
     
     <!-- Footer -->

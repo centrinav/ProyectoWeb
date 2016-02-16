@@ -18,9 +18,9 @@ include($basepath."verified_session.php");
         <script src="<?php echo $baseurl; ?>libs/bootstrap/js/bootstrap.js"></script>
         <script src="<?php echo $baseurl; ?>js/bootstrap.min.js"></script>
         <script src="<?php echo $baseurl; ?>libs/bootstrap/js/typeahead.bundle.js"></script>
-        <script src="<?php echo $baseurl; ?>libs/media/js/jquery/jquery.validate.js"></script>
-        <script src="<?php echo $baseurl; ?>libs/media/js/jquery/jquery.validate.min.js"></script>
-        <script src="<?php echo $baseurl; ?>libs/media/js/jquery/additional-validate.min.js"></script>
+        <script src="<?php echo $baseurl; ?>js/jquery/jquery.validate.js"></script>
+        <script src="<?php echo $baseurl; ?>js/jquery/jquery.validate.min.js"></script>
+        <script src="<?php echo $baseurl; ?>js/jquery/additional-validate.min.js"></script>
         <script src="<?php echo $baseurl; ?>libs/media/js/globalfunctions.js"></script>
         <script src="<?php echo $baseurl; ?>libs/media/js/superfish/hoverIntent.js"></script>
         <script src="<?php echo $baseurl; ?>libs/media/js/superfish/superfish.js"></script>

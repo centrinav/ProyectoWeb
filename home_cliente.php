@@ -99,7 +99,7 @@ include($basepath."verified_session.php");
                         <a href="">Promociones</a>
                     </li>
                     <li>
-                        <a href="armaHelado.php">Arma tu helado</a>
+                        <a href="armarHelado.php">Arma tu helado</a>
                     </li>
                     
 <!--

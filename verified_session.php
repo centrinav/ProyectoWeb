@@ -19,7 +19,11 @@ if(isset($_SESSION["user_data"]["id"]) && $_SESSION["login"] == true){
     //Verificamos si es que la página actual no es el main.php 
     $actual_page = basename($_SERVER['PHP_SELF']);
       
+<<<<<<< HEAD
     if($actual_page == "home.php"){
+=======
+    if($actual_page == "main.php"){
+>>>>>>> origin/VEAU
         return true;
     }else{
         //URL actual
@@ -47,4 +51,9 @@ if(time() > $_SESSION["expirate"]){
     session_destroy();
     echo "Su sesión ha expirado vuelva a loguearse";
     die;
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> origin/VEAU

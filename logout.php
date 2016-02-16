@@ -8,4 +8,8 @@
            
 session_start();
 session_destroy();
+<<<<<<< HEAD
 header("Location:index.php");
+=======
+header("Location:index.php");
+>>>>>>> origin/VEAU

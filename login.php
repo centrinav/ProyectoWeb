@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,7 +75,10 @@
         <!-- /.container -->
     </nav>
 
+=======
+>>>>>>> origin/VEAU
 <?php include("login_redirect.php"); ?>
+<?php include("header_login.php"); ?>
 
 <?php
 //Si es que se redireccionó a esta página se verifica el estado y mensaje de la petición

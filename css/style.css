@@ -27,6 +27,25 @@
     color: #ef539e;
     font-size: 50px;
 }
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+/*VARIOS*/
 #texto{
     color: #333;
     font-size: 15px;
@@ -50,3 +69,13 @@
     padding-bottom: 80px;
 }
 
+
+#button_cerrarSesion{
+    background-color: #bc2286;
+    border-color: #bc2286; 
+}
+
+#button_actualizar{
+    background-color: #8cc73f;
+    border-color: #75a736;
+}

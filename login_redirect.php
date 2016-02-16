@@ -10,6 +10,5 @@ session_start();
 //Validamos si la variable de sesión de usuario existe y si el se realizó el logueo exitosamente
 if(isset($_SESSION["user_data"]["id"]) && $_SESSION["login"] == true){
     header("Location:home.php");
-    session_destroy();
     echo "inicio sesion";
 }

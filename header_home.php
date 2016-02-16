@@ -58,7 +58,7 @@ include($basepath."verified_session.php");
                                     <div class="col-lg-8">
                                         <p class="text-left"><strong>Nombre Apellido</strong></p>
                                         <p class="text-left">
-                                            <a href="#" class="btn btn-primary btn-block btn-sm" id="button_actualizar">Administrar usuarios</a>
+                                            <a href="#" class="btn btn-primary btn-block btn-sm" id="button_actualizar">Administrar</a>
                                         </p>
                                     </div>
                                 </div>

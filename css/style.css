@@ -79,3 +79,8 @@
     background-color: #8cc73f;
     border-color: #75a736;
 }
+
+#featured {
+    width: 940px;
+    margin: 0px auto 20px;
+}

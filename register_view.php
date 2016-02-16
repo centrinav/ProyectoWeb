@@ -70,6 +70,11 @@
         </div>
         <!-- /.container -->
     </nav>
+    
+    <br>
+    <br>
+    <br>
+    <br>
 
 <?php include("login_redirect.php"); ?>
 
@@ -92,35 +97,45 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
         </div>  
 <?php } }?>
 
-    
-    <div class="container" id="login_contenido">
-        <div class="col-md-4">
+<!--Contenido -->    
+<div class="container" id="contenido">
+    <div class="col-md-4">
             <img src="img/otros/mascota.png" height="350" width="300">
         </div>
-        <div class="col-md-6">
-            <div class="col-md-offset-2 col-md-9">
-                <h1 class="text-info text-center" id="titulo_login">Sign In</h1>
-                <form id="frmLogin" method="post" action="login.php" >
-                <fieldset>
-                    <legend class="text-center"></legend>
-                    <div class="row form-group">
-                        <label class="control-label" id="label_usuario">Usuario</label>
-                        <input name="username"  type="text" class="form-control" placeholder="Usuario" >
-                    </div>
-                    <div class="row form-group">
-                        <label class="control-label" id="label_password">Contrase&ntilde;a</label>
-                        <input name="password" type="password" class="form-control" placeholder="Contrase&ntilde;a" >
-                    </div>
-                    <div class="row"><br>
-                        <button type="submit" class="btn btn-lg btn-block btn-primary" id="button_login">SIGN IN</button>
-                    </div><br>
-                </fieldset>
-                </form>
-                <div class="text-center" id="texto">
-                    No tienes cuenta? <b><a href="register_view.php">Registrate</a></b> 
+    <div class="col-md-8">
+        <div class="col-md-offset-2 col-md-6">
+            <h1 class="text-info text-center">Registro de usuario</h1>
+            <div class="text-center" id="texto">Los campos con asterisco (*) son obligatorios</div>           
+            
+            <form id="frmRegister" method="post" action="register_pro.php" >
+            <fieldset>
+                <legend class="text-center"></legend>
+                <div class="row form-group">
+                    <label class="control-label">Nombres y Apellidos*</label>
+                    <input name="name_lastname" id="name_lastname" type="text" class="form-control" placeholder="Nombres y Apellidos" >
                 </div>
+                <div class="row form-group">
+                    <label class="control-label">Nombre de usuario*</label>
+                    <input name="username" type="username" class="form-control" placeholder="Usuario" >
+                </div>
+                <div class="row form-group">
+                    <label class="control-label">Contraseña*</label>
+                    <input name="password" id="password" type="password" class="form-control" placeholder="Contraseña" >
+                </div>
+                <div class="row form-group">
+                    <label class="control-label">Repetir Contraseña*</label>
+                    <input name="re_password" id="re_password" type="password" class="form-control" placeholder="Repita Contraseña" >
+                </div>
+                <div class="row"><br>
+                    <button type="submit" class="btn btn-lg btn-block btn-primary " id="button_registro">Registrarse</button>
+                </div><br>
+            </fieldset>
+            </form>
+            <div class="text-center">
+                <b><a href="login.php">< Regresar al Login</a></b> 
             </div>
         </div>
+    </div>
 </div>
     
     <!-- /.intro-header -->
@@ -150,13 +165,20 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
     <script src="js/bootstrap.min.js"></script>
     
     <script type="text/javascript">
-        $('#frmLogin').validate({
+        $('#frmRegister').validate({
             rules: {
+                name_lastname:{
+                    required: true
+                },    
                 username: {
                     required: true
                 },
                 password: {
-                    required: true
+                    required: true,
+                    minlength: 6
+                },
+                re_password:{
+                    equalTo: "#password"
                 }
             },
             highlight: function(element) {

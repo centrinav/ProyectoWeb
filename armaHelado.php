@@ -1,13 +1,34 @@
-<?php 
+<!--
+?php
 include(__DIR__."/config.php");
 include($basepath."verified_session.php"); 
 ?>
+-->
+<?php include("login_redirect.php"); ?>
+<?php include("header_login.php"); ?>
+
+<br>
+<br>
+<br>
+<br>
 
 
-<?php include("../header_home.php");?>
-
-<div class="container">
-    <h1 class="text-info text-center">Arma tu helado</h1>
+ 
+    <div class="container" id="contenido">
+        <h1 class="text-info text-center" id="titulo">Arma tu helado</h1>
+        <legend class="text-center"></legend>
+        <div class="col-md-4">
+            <br>
+            <br>
+            <br>
+            <img src="img/otros/mascota.png" height="350" width="330">
+        </div>
+        <div class="col-md-4">
+            <br>
+            <br>
+            <img src="img/otros/pasos2.png" height="500" width="500" >
+            
+        </div>
 </div>
 
     

@@ -1,9 +1,11 @@
-<?php include("login_redirect.php"); ?>
-<?php include("header_login.php"); ?>
-<br>
-<br>
-<br>
-<br>
+<?php 
+include(__DIR__."/config.php");
+include($basepath."verified_session.php"); 
+?>
+
+
+<?php include("../header_home.php");?>
+
     <!-- Header -->
     <a name="about"></a>
     <div class="intro-header">
@@ -52,4 +54,4 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+    

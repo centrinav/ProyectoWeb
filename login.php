@@ -20,6 +20,12 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
         </div>  
 <?php } }?>
 
+        
+        <script src="libs/media/js/jquery/jquery-1.11.1.js"></script>
+        <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="libs/media/js/jquery/jquery.validate.js"></script>
+        <script src="libs/media/js/jquery/jquery.validate.min.js"></script>  
+        <script src="libs/media/js/globalfunctions.js"></script> 
     
     <div class="container" id="login_contenido">
         <div class="col-md-4">
@@ -34,13 +40,15 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
                     <div class="row form-group">
                         <label class="control-label" id="label_usuario">Usuario</label>
                         <input name="username"  type="text" class="form-control" placeholder="Usuario" >
+                       
                     </div>
                     <div class="row form-group">
                         <label class="control-label" id="label_password">Contrase&ntilde;a</label>
                         <input name="password" type="password" class="form-control" placeholder="Contrase&ntilde;a" >
+                      
                     </div>
                     <div class="row"><br>
-                        <button type="submit" class="btn btn-lg btn-block btn-primary" id="button_login">SIGN IN</button>
+                        <button type="submit" class="btn btn-lg btn-block btn-primary">SIGN IN</button>
                     </div><br>
                 </fieldset>
                 </form>
@@ -51,10 +59,7 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
         </div>
 </div>
     
-    <!-- /.intro-header -->
 
-    
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
@@ -70,6 +75,9 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
             
         </div>
     </footer>
+
+
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -97,8 +105,37 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
             errorClass: 'help-block'
         });
 
-</script>
 
-</body>
+<?php
+include("config.php");
+include($basepath."users/User.php");
 
-</html>
+$user = $_POST["username"];
+$pass = $_POST["password"];
+
+$user_object = new User();
+$user_data = $user_object->verifiedUserCredentials($user,$pass);
+if($user_data){
+    //Abrimos la sesión
+    session_start();
+
+    /*
+     * Creamos nuevas variables de sesión para el id del usuario
+     * la fecha de inicio y la fecha de expiración
+     */
+
+    $_SESSION["user_data"] = $user_data;
+    $_SESSION["login"] = true;
+    $_SESSION["start"] = time();
+    $_SESSION["expirate"] = $_SESSION["start"]+(60*10);
+    
+     
+}else{  
+    $status = false;
+    $messagge = "El usuario o password son incorrectos";
+}
+
+?>
+
+
+

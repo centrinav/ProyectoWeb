@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="login.php"><button class="btn btn-lg btn-block btn-primary" id="button_login">SIGN IN</button></a>
+                        
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" id="opcionesMenu">
@@ -57,6 +57,9 @@
                     </li>
                     <li>
                         <a href="">¿Cómo preparar?</a>
+                    </li>
+                    <li>
+                        <a href="login.php"><button class="btn btn-lg btn-block btn-primary" id="button">SIGN IN</button></a>
                     </li>
 <!--
                     <li>
@@ -174,3 +177,35 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
 </body>
 
 </html>
+
+
+<?php
+include("config.php");
+include($basepath."users/User.php");
+
+$user = $_POST["username"];
+$pass = $_POST["password"];
+
+$user_object = new User();
+$user_data = $user_object->verifiedUserCredentials($user,$pass);
+if($user_data){
+    //Abrimos la sesión
+    session_start();
+
+    /*
+     * Creamos nuevas variables de sesión para el id del usuario
+     * la fecha de inicio y la fecha de expiración
+     */
+
+    $_SESSION["user_data"] = $user_data;
+    $_SESSION["login"] = true;
+    $_SESSION["start"] = time();
+    $_SESSION["expirate"] = $_SESSION["start"]+(60*10);
+     
+}else{  
+    $status = false;
+    $messagge = "El usuario o password son incorrectos";
+    header("Location: index.php?status=$status&messagge=$messagge");
+}
+
+?>

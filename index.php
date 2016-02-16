@@ -53,8 +53,12 @@
                         <a href="">Toppings</a>
                     </li>
                     <li>
+                        <a href="">Promociones</a>
+                    </li>
+                    <li>
                         <a href="">¿Cómo preparar?</a>
                     </li>
+                    
 <!--
                     <li>
                         <a href="">Haz tu pedido</a>
@@ -89,18 +93,24 @@
 
     </div>
     <!-- /.intro-header -->
-
+    
+    <!--Subfooter -->
     
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <label>Síguenos en nuestras redes sociales: </label>
+                    <label id="follow">Síguenos en nuestras redes sociales: </label>
                     <a href="http://www.facebook.com/gelatosfera/"><img src="img/logo/fb.png" height="50" width="50"></a>
                     <a href="https://www.instagram.com/gelatosfera/"><img src="img/logo/instag.png" height="50" width="50"></a>
                 </div>
-                <div class="col-lg-2">
+<!--
+                <div class="col-lg-3">
+                    <img src="img/otros/mascota.png" height="100" width="60">
+                </div>
+-->
+                <div class="col-lg-3">
                     <p class="copyright text-muted small">Copyright &copy; Gelatosfera 2016.</p>
                 </div>
             </div>

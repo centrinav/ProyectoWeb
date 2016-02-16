@@ -36,3 +36,18 @@
    border-top-color: #1b435e;
    background: #1b435e;
    }
+
+#login_contenido{
+    padding-top: 100px;
+    padding-bottom: 100px;
+/*
+    background: url(../img/fondo/fondo2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+*/
+}
+#follow{
+    color: white;
+    font-size: 15px;
+}
+

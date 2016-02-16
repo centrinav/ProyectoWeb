@@ -42,13 +42,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="http://www.facebook.com/gelatosfera/"><img src="img/logo/fb.png" height="50" width="50"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/gelatosfera/"><img src="img/logo/instag.png" height="50" width="50"></a>
-                    </li>
-                    <li>
-                        <a href="login.php"><button class="btn-success" id="signin" name="signin"> SIGN IN</button></a>
+                        <a href="login.php"><button class="btn btn-lg btn-block btn-primary" id="button_login">SIGN IN</button></a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" id="opcionesMenu">
@@ -58,6 +52,13 @@
                     <li>
                         <a href="">Toppings</a>
                     </li>
+                    <li>
+                        <a href="">Promociones</a>
+                    </li>
+                    <li>
+                        <a href="">¿Cómo preparar?</a>
+                    </li>
+                    
 <!--
                     <li>
                         <a href="">Haz tu pedido</a>
@@ -92,16 +93,28 @@
 
     </div>
     <!-- /.intro-header -->
-
+    
+    <!--Subfooter -->
     
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-9">
+                    <label id="follow">Síguenos en nuestras redes sociales: </label>
+                    <a href="http://www.facebook.com/gelatosfera/"><img src="img/logo/fb.png" height="50" width="50"></a>
+                    <a href="https://www.instagram.com/gelatosfera/"><img src="img/logo/instag.png" height="50" width="50"></a>
+                </div>
+<!--
+                <div class="col-lg-3">
+                    <img src="img/otros/mascota.png" height="100" width="60">
+                </div>
+-->
+                <div class="col-lg-3">
                     <p class="copyright text-muted small">Copyright &copy; Gelatosfera 2016.</p>
                 </div>
             </div>
+            
         </div>
     </footer>
 

@@ -1,38 +1,52 @@
 #opcionesMenu{
-    padding-top: 15px;
+    padding-top: 20px;
     padding-right: 35px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
-#signin{
-    font-size: 50px;
-    color: #8dc73f;
+/* LOGIN*/
+#button_login{
+    background-color: #8cc73f;
+    border-color: #75a736;
 }
-
-#signin {
-   border-top: 1px solid #8cc73f;
-   background: #8cc73f;
-   background: -webkit-gradient(linear, left top, left bottom, from(#8cc73f), to(#8cc73f));
-   background: -webkit-linear-gradient(top, #8cc73f, #8cc73f);
-   background: -moz-linear-gradient(top, #8cc73f, #8cc73f);
-   background: -ms-linear-gradient(top, #8cc73f, #8cc73f);
-   background: -o-linear-gradient(top, #8cc73f, #8cc73f);
-   padding: 14px 25px;
-   -webkit-border-radius: 18px;
-   -moz-border-radius: 18px;
-   border-radius: 18px;
-   color: white;
-   font-size: 21px;
-   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
-   text-decoration: none;
-   vertical-align: middle;
-   }
-#signin:hover {
+#button_login:hover {
    border-top-color: #8cc73f;
-   background: #8cc73f;
-   color: #959595;
+   background: #75a736;
+   color: #fff;
    }
-#signin:active {
-   border-top-color: #1b435e;
-   background: #1b435e;
+#button_registro{
+    background-color: #8cc73f;
+    border-color: #75a736;
+}
+#button_registro:hover {
+   border-top-color: #8cc73f;
+   background: #75a736;
+   color: #fff;
    }
+#titulo_login{
+    color: #ef539e;
+    font-size: 50px;
+}
+#texto{
+    color: #333;
+    font-size: 15px;
+}
+#login_contenido{
+    padding-top: 150px;
+    padding-bottom: 80px;
+/*
+    background: url(../img/fondo/fondo2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+*/
+}
+#follow{
+    color: white;
+    font-size: 15px;
+}
+/* REGISTRO*/
+#contenido{
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+

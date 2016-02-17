@@ -68,6 +68,11 @@
     padding-top: 40px;
     padding-bottom: 80px;
 }
+#verPedido{
+    background: url(../img/otros/helado.png) no-repeat;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
 #info-usuarios{
     color: #333;
 }

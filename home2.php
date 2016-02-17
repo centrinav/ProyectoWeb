@@ -111,24 +111,13 @@
         </div>
 
     
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        
-                    </div>
-                </div>
-            </div>
-
+    <div class="container" id="login_contenido">
+        <div class="col-md-4">
+            <img src="img/otros/helado.png" height="550" width="500">
         </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
+        
+</div>
+    
     
     <!--Subfooter -->
     

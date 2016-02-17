@@ -5,11 +5,11 @@
 }
 
 /* LOGIN*/
-#button_login{
+#button_sign{
     background-color: #8cc73f;
     border-color: #75a736;
 }
-#button_login:hover {
+#button_sign:hover {
    border-top-color: #8cc73f;
    background: #75a736;
    color: #fff;
@@ -68,7 +68,9 @@
     padding-top: 40px;
     padding-bottom: 80px;
 }
-
+#info-usuarios{
+    color: #333;
+}
 
 #button_cerrarSesion{
     background-color: #bc2286;
@@ -84,3 +86,21 @@
     width: 940px;
     margin: 0px auto 20px;
 }
+#editar{
+    background-color: #8cc73f;
+    border-color: #75a736;
+}
+#editar:hover {
+   border-top-color: #8cc73f;
+   background: #75a736;
+   color: #fff;
+   }
+#eliminar{
+    background-color: #ef539e;
+    border-color: #bc2286;
+}
+#eliminar:hover {
+   border-top-color: #ef539e;
+   background: #bc2286;
+   color: #fff;
+   }

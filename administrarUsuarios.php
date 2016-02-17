@@ -1,12 +1,26 @@
-<!--
-?php
-include(__DIR__."/config.php");
-include($basepath."verified_session.php"); 
-?>
--->
-<?php include("login_redirect.php"); ?>
-<?php include("header_login.php"); ?>
+<?php include("../header_home.php");?>
+<?php include_once("User.php");?>
 
+<?php
+/*
+ * Control y muestra de mensajes. NO BORRAR
+ */
+if(isset($_GET["messagge"]) && isset($_GET["status"])){
+    if($_GET["status"] == true){ ?>
+        <div class="col-md-offset-4 col-md-4"><br>
+            <div class="alert alert-success">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <strong><?php echo $_GET["messagge"]; ?></strong>
+            </div>
+        </div>   
+    <?php }else{ ?> 
+        <div class="col-md-offset-4 col-md-4"><br>
+            <div class="alert alert-warning">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <strong><?php echo $_GET["messagge"]; ?></strong>
+            </div>
+        </div>  
+<?php } }?>
 <br>
 <br>
 <br>
@@ -15,38 +29,45 @@ include($basepath."verified_session.php");
 
  
 <div class="container" id="contenido">
-    <h1 class="text-info text-center" id="titulo">Administración de usuarios</h1>
+    <h1 class="text-info text-center" id="titulo">Administración de usuarios&nbsp;<span class="glyphicon glyphicon-user"></span></h1>
     <legend class="text-center"></legend>
-    <div class="col-md-12">
-        <table class="table" border="2">
-                <tr><th>&nbsp;Nombre:&nbsp;</th><th>&nbsp;Nacionalidad:&nbsp;</th><th>&nbsp;Pais:&nbsp;</th></tr>
-            <?php
-                $sql_peticion="SELECT * FROM cliente";
-                $resultados=mysqli_query($conexion,$sql_peticion);
-                //validar si la consulta nos da un resultado no vacio
-                if(mysqli_num_rows($resultados)>0){
-                    echo "<h1>Lista de registros:</h1>";
-                        while($row=mysqli_fetch_assoc($resultados)){
-                            ?>
-                                <tr><td>&nbsp;<?php echo $row["nombre"] ?>&nbsp;</td>
-                                    <td>&nbsp;<?php echo $row["nacionalidad"] ?>&nbsp;</td>
-                                    <td>&nbsp;<?php echo $row["pais"] ?>&nbsp;</td>
-                                    <td>&nbsp;<a href="ver.php?cliente_id= <?php echo $row["id"]?>" >Ver</a>&nbsp;</td>
-                                    <td>&nbsp;<a href="editar.php?cliente_id= <?php echo $row["id"]?>" >Editar</a>&nbsp;</td>
-                                    <td>&nbsp;<a href="borrar.php?cliente_id= <?php echo $row["id"]?>" >Borrar</a>&nbsp;</td>
-                                    <td><div cliente_id="<?php echo $row['id'];?>" id="boton_saludo_<?php echo $row['id'];?>" style="background: lightblue;">Saludo</div></td>
-                </tr>
-                                <?php
-                                }
+    <?php
+    $users = User::getAllUsers();
+    if(!empty($users)){?>
+    <div class="col-md-8">
+        <table class="table" border="0" id="info-usuarios">
+            <tr>
+                <th>&nbsp;Nombres y Apellidos&nbsp;</th>
+                <th>&nbsp;Usuario&nbsp;</th>
+                <th>&nbsp;Contraseña&nbsp;</th>
+                <th>&nbsp;Perfil de usuario&nbsp;</th>
+            </tr>
+            <?php foreach($users as $user){ ?>
+            <tr>
+                <td><?php echo utf8_encode($user->name) ?></td>
+                <td><?php echo $user->username ?></td>
+                <td><?php echo Profile::getProfileById($user->profile_id)->name; ?></td>
+                <td>
+                    <?php 
+                    //Solo permite borrar y actualizar a administradores, y no permite borrar el superadmin
+                    if(!($user->id == 1) && $_SESSION["user_data"]["profile_id"] == 1 || $_SESSION["user_data"]["profile_id"] == 2){ ?>
+                    <a href="update_view.php?user_id=<?php echo $user->id; ?>">
+                    <button class=" btn btn-primary glyphicon glyphicon-pencil" id="editar">
+                    </button></a>
+                    <a href="delete_pro.php?user_id=<?php echo $user->id; ?>">
+                    <button class=" btn btn-danger glyphicon glyphicon-remove" id="eliminar">
+                    </button></a>
+                    <?php } ?>
+                </td>
+            </tr>
+            <?php }?>
+        </table>
+        <?php }else{ ?>
+        <div class="col-md-offset-2 col-md-8 text-center alert">
+            No se encontraron usuarios
+        </div>
 
-                }
-                else{
-                    echo "no existieron resultados";
-
-                }
-
-            ?>
-        </table>   
+        <?php } ?>
     </div>
         
 </div>
@@ -74,8 +95,33 @@ include($basepath."verified_session.php");
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    
 
-</body>
-
-</html>
+<script>
+    $(function(){
+        if($('#table_user tbody tr').length>0){
+            $('#table_user').DataTable({
+                "bPaginate": true,
+                "bLengthChange": false,
+                "bInfo": true,
+                "sPaginationType": "full_numbers",
+                "oLanguage": {
+                    "oPaginate": {
+                        "sFirst": "Primera",
+                        "sLast": "&Uacute;ltima",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    },
+                    "sZeroRecords": "No se encontraron resultados",
+                    "sInfo": "_START_ - _END_ de _TOTAL_",
+                    "sInfoEmpty": "0 - 0 de 0",
+                    "sInfoFiltered": "(de _MAX_ en total)",
+                    "sSearch": "Buscar:",
+                    "sProcessing": "Filtrando.."
+                }
+            });
+        }
+        $('#table_user')
+            .removeClass( 'display' )
+            .addClass('table table-striped table-bordered');
+    });
+</script>

@@ -16,10 +16,16 @@
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <script src="libs/media/js/jquery/jquery-1.11.1.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="libs/media/js/jquery/jquery.validate.js"></script>
+    <script src="libs/media/js/jquery/jquery.validate.min.js"></script>  
+    <script src="libs/media/js/globalfunctions.js"></script> 
 
 </head>
 

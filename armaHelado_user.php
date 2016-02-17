@@ -23,7 +23,7 @@ include($basepath."verified_session.php");
             <fieldset>
                 <div class="row form-group">
                     <label class="control-label">Tamaño</label>
-                    <select class="form-control" name="precio">
+                    <select class="form-control" name="precio" id="precio">
                         <option value="">Escoje el tamaño de tu tarrina</option>
                         <option value="P">$1 - Pequeño               </option>
                         <option value="M">$2.5 - Mediado</option>
@@ -33,7 +33,7 @@ include($basepath."verified_session.php");
                 </div>
                 <div class="row form-group">
                     <label class="control-label">Sabor</label>
-                    <select class="form-control" name="sabor">
+                    <select class="form-control" name="sabor" id="sabor">
                         <option value="">Escoje tu sabor favorito de helado</option>
                         <option value="CL">Chicle               </option>
                         <option value="CH">Chocolate</option>
@@ -46,7 +46,7 @@ include($basepath."verified_session.php");
                 </div>
                 <div class="row form-group">
                     <label class="control-label">Topping - Opción 1</label>
-                    <select class="form-control" name="sabor">
+                    <select class="form-control" name="topping1" id="topping1">
                         <option value="">Escoje tus toppings favoritos</option>
                         <option value="P">Plátano               </option>
                         <option value="BC">Bolitas de colores</option>
@@ -64,7 +64,7 @@ include($basepath."verified_session.php");
                 </div>
                 <div class="row form-group">
                     <label class="control-label">Topping - Opción 2</label>
-                    <select class="form-control" name="sabor">
+                    <select class="form-control" name="topping2" id="topping2">
                         <option value="">Escoje tus toppings favoritos</option>
                         <option value="P">Plátano               </option>
                         <option value="BC">Bolitas de colores</option>

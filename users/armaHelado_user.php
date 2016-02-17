@@ -1,12 +1,5 @@
-<!--
-?php
-include(__DIR__."/config.php");
-include($basepath."verified_session.php"); 
-?>
--->
-<?php include("login_redirect.php"); ?>
-<?php include("header_login.php"); ?>
-
+<?php include("config.php"); ?>
+<?php include($basepath."header_home.php"); ?>
 <br>
 <br>
 <br>

@@ -15,7 +15,7 @@ if($user_data){
     $_SESSION["login"] = true;
     $_SESSION["start"] = time();
     $_SESSION["expirate"] = $_SESSION["start"]+(60*10);
-    header("Location: login.php");
+    header("Location: home.php");
      
 }else{  
     $status = false;

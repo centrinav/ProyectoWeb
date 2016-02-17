@@ -19,7 +19,7 @@ if(isset($_SESSION["user_data"]["id"]) && $_SESSION["login"] == true){
     //Verificamos si es que la página actual no es el main.php 
     $actual_page = basename($_SERVER['PHP_SELF']);
       
-    if($actual_page == "main.php"){
+    if($actual_page == "http://www.juventus.com/es/"){
         return true;
     }else{
         //URL actual

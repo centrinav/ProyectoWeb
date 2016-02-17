@@ -42,11 +42,7 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
                       
                     </div>
                     <div class="row"><br>
-<<<<<<< HEAD
-                        <button type="submit" class="btn btn-lg btn-block btn-primary" id="button_sign">SIGN IN</button>
-=======
                         <button type="submit" class="btn btn-lg btn-block btn-primary">Ingresar</button>
->>>>>>> victor
                     </div><br>
                 </fieldset>
                 </form>
@@ -57,7 +53,11 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
         </div>
 </div>
     
+<script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+    
  
 <script type="text/javascript">
         $('#frmLogin').validate({

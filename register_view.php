@@ -10,14 +10,14 @@
 //Si es que se redireccionó a esta página se verifica el estado y mensaje de la petición
 if(isset($_GET["messagge"]) && isset($_GET["status"])){
     if($_GET["status"] == true){ ?>
-        <div class="col-md-offset-4 col-md-4"><br>
+        <div class="col-md-offset-2 col-md-6"><br>
             <div class="alert alert-success">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                 <strong><?php echo $_GET["messagge"]; ?></strong>
             </div>
         </div>   
     <?php }else{ ?> 
-        <div class="col-md-offset-4 col-md-4"><br>
+        <div class="col-md-offset-2 col-md-6"><br>
             <div class="alert alert-warning">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                 <strong><?php echo $_GET["messagge"]; ?></strong>

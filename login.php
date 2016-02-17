@@ -21,11 +21,6 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
 <?php } }?>
 
         
-        <script src="libs/media/js/jquery/jquery-1.11.1.js"></script>
-        <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-        <script src="libs/media/js/jquery/jquery.validate.js"></script>
-        <script src="libs/media/js/jquery/jquery.validate.min.js"></script>  
-        <script src="libs/media/js/globalfunctions.js"></script> 
     
     <div class="container" id="login_contenido">
         <div class="col-md-4">
@@ -34,7 +29,7 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
         <div class="col-md-6">
             <div class="col-md-offset-2 col-md-9">
                 <h1 class="text-info text-center" id="titulo_login">Sign In</h1>
-                <form id="frmLogin" method="post" action="login.php" >
+                <form id="frmLogin" method="post" action="logueo.php" >
                 <fieldset>
                     <legend class="text-center"></legend>
                     <div class="row form-group">
@@ -59,6 +54,28 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
         </div>
 </div>
     
+
+<script type="text/javascript">
+        $('#frmLogin').validate({
+            rules: {
+                username: {
+                    required: true
+                },
+                password: {
+                    required: true
+                }
+            },
+            highlight: function(element) {
+                $(element).closest('.form-group').addClass('has-error').removeClass('has-success');
+            },
+            unhighlight: function(element) {
+                $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+            },
+            errorElement: 'span',
+            errorClass: 'help-block'
+        });
+    </script>
+
 
     <footer>
         <div class="container">
@@ -85,57 +102,9 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     
-    <script type="text/javascript">
-        $('#frmLogin').validate({
-            rules: {
-                username: {
-                    required: true
-                },
-                password: {
-                    required: true
-                }
-            },
-            highlight: function(element) {
-                $(element).closest('.form-group').addClass('has-error').removeClass('has-success');
-            },
-            unhighlight: function(element) {
-                $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
-            },
-            errorElement: 'span',
-            errorClass: 'help-block'
-        });
-
-
-<?php
-include("config.php");
-include($basepath."users/User.php");
-
-$user = $_POST["username"];
-$pass = $_POST["password"];
-
-$user_object = new User();
-$user_data = $user_object->verifiedUserCredentials($user,$pass);
-if($user_data){
-    //Abrimos la sesión
-    session_start();
-
-    /*
-     * Creamos nuevas variables de sesión para el id del usuario
-     * la fecha de inicio y la fecha de expiración
-     */
-
-    $_SESSION["user_data"] = $user_data;
-    $_SESSION["login"] = true;
-    $_SESSION["start"] = time();
-    $_SESSION["expirate"] = $_SESSION["start"]+(60*10);
     
-     
-}else{  
-    $status = false;
-    $messagge = "El usuario o password son incorrectos";
-}
 
-?>
+
 
 
 

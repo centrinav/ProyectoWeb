@@ -5,14 +5,14 @@
 //Si es que se redireccionó a esta página se verifica el estado y mensaje de la petición
 if(isset($_GET["messagge"]) && isset($_GET["status"])){
     if($_GET["status"] == true){ ?>
-        <div class="col-md-offset-4 col-md-4"><br>
+        <div class="col-md-offset-2 col-md-9"><br>
             <div class="alert alert-success">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                 <strong><?php echo $_GET["messagge"]; ?></strong>
             </div>
         </div>   
     <?php }else{ ?> 
-        <div class="col-md-offset-4 col-md-4"><br>
+        <div class="col-md-offset-2 col-md-9"><br>
             <div class="alert alert-warning">
                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                 <strong><?php echo $_GET["messagge"]; ?></strong>
@@ -21,7 +21,6 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
 <?php } }?>
 
         
-    
     <div class="container" id="login_contenido">
         <div class="col-md-4">
             <img src="img/otros/mascota.png" height="350" width="300">
@@ -43,7 +42,11 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
                       
                     </div>
                     <div class="row"><br>
+<<<<<<< HEAD
                         <button type="submit" class="btn btn-lg btn-block btn-primary" id="button_sign">SIGN IN</button>
+=======
+                        <button type="submit" class="btn btn-lg btn-block btn-primary">Ingresar</button>
+>>>>>>> victor
                     </div><br>
                 </fieldset>
                 </form>
@@ -55,6 +58,7 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
 </div>
     
 
+ 
 <script type="text/javascript">
         $('#frmLogin').validate({
             rules: {
@@ -74,7 +78,8 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
             errorElement: 'span',
             errorClass: 'help-block'
         });
-    </script>
+
+</script>
 
 
     <footer>
@@ -96,11 +101,7 @@ if(isset($_GET["messagge"]) && isset($_GET["status"])){
 
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
     
     
 

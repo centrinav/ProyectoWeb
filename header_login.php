@@ -46,10 +46,10 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right" id="opcionesMenu">
                     <li>
-                        <a href="">Sabores</a>
+                        <a href="sabores.php">Sabores</a>
                     </li>
                     <li>
-                        <a href="">Toppings</a>
+                        <a href="toppings.php">Toppings</a>
                     </li>
                     <li>
                         <a href="">Promociones</a>

@@ -1,7 +1,3 @@
-<?php 
-include(__DIR__."/config.php");
-include($basepath."verified_session.php"); 
-?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -69,12 +65,8 @@ include($basepath."verified_session.php");
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <p>
-                                            <?php 
-                    $profile = new Profile();
-                    $menu = $profile->getMenu(NULL, $_SESSION["user_data"]["profile_id"]);
-                    echo $menu;
-                    ?>
-                                            <a href="<?php echo $baseurl; ?>logout.php" class="btn btn-danger btn-block" id="button_cerrarSesion">Cerrar Sesion</a>
+                                            
+                                            <a href="logout.php" class="btn btn-danger btn-block" id="button_cerrarSesion">Cerrar Sesion</a>
                                         </p>
                                     </div>
                                 </div>
@@ -103,7 +95,7 @@ include($basepath."verified_session.php");
         </div>
         <!-- /.container -->
     </nav>
-        <div id="welcome_user">Bienvenido, <?php echo utf8_encode($_SESSION["user_data"]["name"]); ?></div>
+        <div id="welcome_user">Bienvenido, </div>
 
         <div class="banner_container text-center">
 
@@ -112,14 +104,59 @@ include($basepath."verified_session.php");
         <div>
             <!--    <!-- Left nav -->
             <ul id="main-menu" class="sm sm-simple" style="padding-left: 0px;" >
-                <?php 
-                $profile = new Profile();
-                $menu = $profile->getMenu(NULL, $_SESSION["user_data"]["profile_id"]);
-                echo $menu;
-                ?>
-                <li class="navbar-right"><a href="<?php echo $baseurl; ?>logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+                
+                <li class="navbar-right"><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
 
             </ul>
         </div>
 
+    
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+    
+    <!--Subfooter -->
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <label id="follow">Síguenos en nuestras redes sociales: </label>
+                    <a href="http://www.facebook.com/gelatosfera/"><img src="img/logo/fb.png" height="50" width="50"></a>
+                    <a href="https://www.instagram.com/gelatosfera/"><img src="img/logo/instag.png" height="50" width="50"></a>
+                </div>
+<!--
+                <div class="col-lg-3">
+                    <img src="img/otros/mascota.png" height="100" width="60">
+                </div>
+-->
+                <div class="col-lg-3">
+                    <p class="copyright text-muted small">Copyright &copy; Gelatosfera 2016.</p>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
     

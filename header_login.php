@@ -41,7 +41,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="login.php"><button class="btn btn-lg btn-block btn-primary" id="button_login">SIGN IN</button></a>
+                        <a href="login.php"><button class="btn btn-lg btn-block btn-primary">SIGN IN</button></a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" id="opcionesMenu">

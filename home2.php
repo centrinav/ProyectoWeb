@@ -111,11 +111,38 @@
         </div>
 
     
-    <div class="container" id="login_contenido">
+    <div class="container" id="ver-pedido">
         <div class="col-md-4">
-            <img src="img/otros/helado.png" height="550" width="500">
+<!--            <img src="img/otros/helado.png" height="550" width="500">-->
         </div>
-        
+        <div class="col-md-8">
+        <div class="col-md-offset-3 col-md-6">
+            <h1 class="text-info text-center">Factura</h1>
+                <legend class="text-center"></legend>
+                <div class="row form-group">
+                    <label class="control-label">Nombres y Apellidos: </label>
+                    <input name="name_lastname" id="name_lastname" type="text" class="form-control" placeholder="Nombres y Apellidos" >
+                </div>
+                <div class="row form-group">
+                    <label class="control-label">Nombre de usuario: </label>
+                    <input name="username" type="username" class="form-control" placeholder="Usuario" >
+                </div>
+                <div class="row form-group">
+                    <label class="control-label">Fecha: </label>
+                    <input name="date" id="fecha" type="fecha" class="form-control">
+                </div>
+                <div class="row form-group">
+                    <label class="control-label">Número de compra: </label>
+                    <input name="nCompra" id="nCompra" type="number" class="form-control">
+                </div>
+                <div class="row"><br>
+                    <button type="submit" class="btn btn-lg btn-block btn-primary " id="button_registro">Confirmar</button>
+                </div><br>
+            <div class="text-center">
+                <b><a href="users/armaHelado_user.php">< Regresar y armar helado</a></b> 
+            </div>
+        </div>
+    </div>
 </div>
     
     

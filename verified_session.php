@@ -33,12 +33,13 @@ if(isset($_SESSION["user_data"]["id"]) && $_SESSION["login"] == true){
         if($URLverified == true){
             return true;
         }else{
-            header("Location:../denied_profile.php");                            
+            header("Location:../ProyectoWeb/denied_profile.php");    
+            
         }    
     }
 
 }else{
-    header("Location:../denied.php");              
+    header("Location:../ProyectoWeb/denied.php");              
 }
 
 // Validamos si la sesión todavía no ha expirado. Podemos realizar automaticamente esto mediante php.ini 
